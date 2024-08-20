@@ -1,0 +1,11 @@
+div#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    background: red;
+    border: 1px solid black;
+    height: 57px;
+    width: 57px;
+}
