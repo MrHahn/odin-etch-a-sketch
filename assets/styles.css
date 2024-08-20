@@ -9,3 +9,7 @@ div#grid-container {
     height: 57px;
     width: 57px;
 }
+
+.grid-item.hovered{
+    background:black;
+}
