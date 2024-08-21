@@ -18,7 +18,7 @@ prepareGrid(userNum);
  function createGrid(num, userNum){
     gridItems.length = 0;
     grid.innerHTML = '';
-    let boxWidth = (960 / userNum) - 2; // subtracting the borders on each side
+    let boxWidth = (960 / userNum)
     for(let i = 0; i < num; i++){
         let gridItem = document.createElement('div');
         gridItem.classList.add('grid-item');

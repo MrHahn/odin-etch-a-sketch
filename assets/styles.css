@@ -4,13 +4,27 @@ div#grid-container {
     width: 960px;
     height: 960px;
     margin: 0 auto;
+    border: 100px outset red;
+    border-radius: 25px;
+    position: relative;
 }
 
 .grid-item {
-    background: red;
-    border: 1px solid black;
+    background: #7E8891;
+    /* border: 1px solid black; */
 }
 
 .grid-item.hovered{
     background:black;
+}
+
+button.reset-grid {
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    max-width: 200px;
+    background: red;
+    border: 0;
+    font-size: 30px;
+    color: gold;
 }
