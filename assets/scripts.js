@@ -2,6 +2,7 @@ const grid = document.querySelector('#grid-container');
 let gridItems = [];
 let userNum = prompt("How many squares per side?")
 let resetBtn = document.querySelector('.reset-grid');
+let brightness = 1;
 
 
 prepareGrid(userNum);
@@ -9,6 +10,7 @@ prepareGrid(userNum);
 
  resetBtn.addEventListener('click', () => {
     userNum = prompt("please enter a number 100 or lower");
+    brightness = 1;
     prepareGrid(userNum);
  })
 
@@ -31,10 +33,16 @@ prepareGrid(userNum);
 }
 
  function changeOnHover(){
-    // this.classList.add('hovered');
-    let randomColor = Math.floor(Math.random()*16777215).toString(16)
-    console.log(randomColor);
+    let randomColor = ((1 << 24) * Math.random() | 0).toString(16).padStart(6, "0");
     this.style.background = '#' + randomColor;
+    this.style.filter = `brightness(${brightness})`; 
+    if ( brightness > 0.1){
+        brightness -= .1;
+    } else{
+        brightness = 0;
+    }
+    
+
 }
 
 function prepareGrid(userNum){
