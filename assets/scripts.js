@@ -31,7 +31,10 @@ prepareGrid(userNum);
 }
 
  function changeOnHover(){
-    this.classList.add('hovered');
+    // this.classList.add('hovered');
+    let randomColor = Math.floor(Math.random()*16777215).toString(16)
+    console.log(randomColor);
+    this.style.background = '#' + randomColor;
 }
 
 function prepareGrid(userNum){
